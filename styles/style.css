@@ -341,12 +341,15 @@ main nav li {
 
 .experience {
   background: #f6f6f6;
-  padding-bottom: 200px;
+  padding-bottom: 300px;
 }
 
 .contact {
   position: relative;
-  height: 200px;
+  height: 350px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contact h2 {
@@ -354,8 +357,39 @@ main nav li {
   text-align: left;
   line-height: 1.2;
   margin: 0;
-  margin-right: 30%;
   margin-bottom: 20px;
+}
+
+.contact div:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-right: 2%;
+}
+
+.contact .wrapper {
+  position: absolute;
+  bottom: 100px;
+  -webkit-box-shadow: 10px 10px 10px #dddddd;
+          box-shadow: 10px 10px 10px #dddddd;
+  background: #ffffff;
+  margin: 0 10%;
+}
+
+.contact .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 100px;
+}
+
+.contact .contactForm {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
 }
 
 .contact ul {
@@ -383,7 +417,7 @@ main nav li {
 .contact button {
   background-color: #ff5e00;
   border: none;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
   color: #ffffff;
   letter-spacing: 1px;
