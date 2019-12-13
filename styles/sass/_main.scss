@@ -1,7 +1,4 @@
 main {
-    h2 {
-        margin-bottom: 0;
-    }
     nav {
         padding: 50px 0;
         ul {
@@ -31,12 +28,64 @@ main {
     grid-column: 1 / 3;
 }
 
-//experience
+//skills
 
-.experience {
+.skills {
     background: $secondary;
     padding-bottom: 300px;
+    ul {
+        justify-content: space-around;
+        align-items: stretch;
+        padding: 60px 0;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        flex: 0 0 calc(10% - 20px);
+        padding-top: 20px;
+
+        &:hover,
+        &:focus {
+            i {
+                color: lighten($fontColour, 10);
+                transform: scale(1.1);
+                transition: ease-in 400ms;
+            }
+            p {
+                opacity: 100;
+                transform: translate(0, -4px);
+                transition: linear 400ms;
+            }
+        }
+
+    }
+
+    li.ionIcons {
+        padding-top: 7px;
+        i {
+            font-size: 90px;
+            margin-bottom: 0;
+        }
+    }
+
+    i {
+        font-size: 80px;
+        margin-bottom: 17px;
+    }
+
+    p {
+        opacity: 0;
+    }
+
+
 }
+
+
+
 
 //contact
 
@@ -48,8 +97,8 @@ main {
         font-size: 5.5rem;
         text-align: left;
         line-height: 1.2;
-        margin: 0;
         margin-bottom: 20px;
+        padding: 0;
     }
 
     div:first-child {
@@ -61,7 +110,7 @@ main {
     .wrapper {
         position: absolute;
         bottom: 100px;        
-        box-shadow: 10px 10px 10px darken($secondary, 10);
+        box-shadow: 0 0 20px darken($secondary, 10);
         background: $light;
         margin: 0 10%;
     }
@@ -83,8 +132,13 @@ main {
     input,
     textarea {
         border: none;
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid darken($secondary, 10);
         width: 100%;
+        margin-bottom: 10px;
+
+        &:focus {
+            background: $secondary;
+        }
     }
 
     textarea {
@@ -93,6 +147,8 @@ main {
 
     label {
         color: $grey;
+        text-transform: lowercase;
+        margin-top: 20px;
     }
 
     button {
@@ -102,6 +158,13 @@ main {
         width: 100%;
         color: $light;
         letter-spacing: 1px;
+        margin-top: 20px;
+
+        &:hover,
+        &:focus {
+            box-shadow: inset 0 0 5px darken($accent, 40);
+            color: darken($light, 8);
+        }
     }
 }
 
