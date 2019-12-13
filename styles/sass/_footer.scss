@@ -1,0 +1,33 @@
+footer {
+    background-color: $fontColour;
+    color: $light;
+    font-size: 1.8rem;
+    padding: 50px;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        text-transform: uppercase;
+        padding: 20px;
+        a {
+            padding: 10px 10px;
+            margin: 0 2px;
+            &:hover,
+            &:focus {
+                border-bottom: 4px solid $accent;
+            }
+        }
+    }
+
+    i {
+    color: $light;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

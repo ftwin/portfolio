@@ -1,0 +1,32 @@
+header {
+    nav {
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0;
+
+        ul {
+            text-transform: uppercase;
+            a {
+                padding: 10px 10px;
+                margin: 0 2px;
+                &:hover,
+                &:focus {
+                    border-bottom: 4px solid $accent;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+        margin-left: 40%;
+    }
+}
