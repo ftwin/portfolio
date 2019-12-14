@@ -11,9 +11,31 @@ header {
             a {
                 padding: 10px 10px;
                 margin: 0 2px;
+                position: relative;
                 &:hover,
                 &:focus {
-                    border-bottom: 4px solid $accent;
+                        &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: .5rem;
+                                left: 10%;
+                                width: 80%;
+                                height: 6px;
+                                background: $accent;
+                            }
+                }
+            }
+        }
+
+        ul.icons {
+            a {
+                font-size: 2rem;
+                &:hover,
+                &:focus {
+                    color: $accent;
+                    &::after {
+                        display: none;
+                    }
                 }
             }
         }

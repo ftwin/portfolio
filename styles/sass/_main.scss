@@ -45,20 +45,21 @@ main {
         // justify-content: space-between;
         align-items: center;
         text-align: center;
-        flex: 0 0 calc(10% - 20px);
+        flex: 0 0 calc(10%);
         padding-top: 20px;
 
         &:hover,
         &:focus {
             i {
-                color: lighten($fontColour, 10);
+                color: lighten($fontColour, 20);
                 transform: scale(1.1);
-                transition: ease-in 400ms;
+                transition: ease-in 200ms;
             }
             p {
                 opacity: 100;
                 transform: translate(0, -4px);
-                transition: linear 400ms;
+                transition: linear 200ms;
+                font-weight: 400;
             }
         }
 

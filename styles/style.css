@@ -274,10 +274,29 @@ header nav ul {
 header nav ul a {
   padding: 10px 10px;
   margin: 0 2px;
+  position: relative;
 }
 
-header nav ul a:hover, header nav ul a:focus {
-  border-bottom: 4px solid #ff5e00;
+header nav ul a:hover::after, header nav ul a:focus::after {
+  content: "";
+  position: absolute;
+  bottom: .5rem;
+  left: 10%;
+  width: 80%;
+  height: 6px;
+  background: #ff5e00;
+}
+
+header nav ul.icons a {
+  font-size: 2rem;
+}
+
+header nav ul.icons a:hover, header nav ul.icons a:focus {
+  color: #ff5e00;
+}
+
+header nav ul.icons a:hover::after, header nav ul.icons a:focus::after {
+  display: none;
 }
 
 .hero {
@@ -364,25 +383,26 @@ main nav li {
           align-items: center;
   text-align: center;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(10% - 20px);
-          flex: 0 0 calc(10% - 20px);
+      -ms-flex: 0 0 calc(10%);
+          flex: 0 0 calc(10%);
   padding-top: 20px;
 }
 
 .skills li:hover i, .skills li:focus i {
-  color: #2b2b2b;
+  color: #444444;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: ease-in 400ms;
-  transition: ease-in 400ms;
+  -webkit-transition: ease-in 200ms;
+  transition: ease-in 200ms;
 }
 
 .skills li:hover p, .skills li:focus p {
   opacity: 100;
   -webkit-transform: translate(0, -4px);
           transform: translate(0, -4px);
-  -webkit-transition: linear 400ms;
-  transition: linear 400ms;
+  -webkit-transition: linear 200ms;
+  transition: linear 200ms;
+  font-weight: 400;
 }
 
 .skills li.ionIcons {
