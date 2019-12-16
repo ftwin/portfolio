@@ -211,6 +211,7 @@ ul {
 
 img {
   width: 100%;
+  display: block;
 }
 
 h1 {
@@ -250,6 +251,7 @@ textarea {
 
 .wrapper {
   width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -311,6 +313,8 @@ header nav ul.icons a:hover::after, header nav ul.icons a:focus::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: url("../assets/laura-vinck-Hyu76loQLdk-unsplash.jpg");
+  background-position: center;
 }
 
 .hero div {

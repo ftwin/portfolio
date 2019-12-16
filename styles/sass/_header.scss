@@ -47,6 +47,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: 
+    // linear-gradient(-30deg, rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.6)),
+    // linear-gradient(50deg, rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.6)),
+    url("../assets/laura-vinck-Hyu76loQLdk-unsplash.jpg");
+    background-position: center;
 
     div {
         margin-left: 40%;
