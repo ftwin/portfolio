@@ -400,6 +400,14 @@ main nav li {
   transition: ease-in 200ms;
 }
 
+.skills li:hover svg, .skills li:focus svg {
+  fill: #444444;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: ease-in 200ms;
+  transition: ease-in 200ms;
+}
+
 .skills li:hover p, .skills li:focus p {
   opacity: 100;
   -webkit-transform: translate(0, -4px);
@@ -425,6 +433,12 @@ main nav li {
 
 .skills p {
   opacity: 0;
+}
+
+.skills svg {
+  height: 84px;
+  margin-bottom: 14px;
+  fill: #111111;
 }
 
 .contact {
