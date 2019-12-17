@@ -1,3 +1,4 @@
+@charset "UTF-8";
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -346,13 +347,43 @@ main nav li {
   grid-row-gap: 100px;
 }
 
-.gallery div.description {
+.gallery a {
+  color: #ffffff;
+  background: #111111;
+  padding: 4px 18px 5px 20px;
+  border-radius: 20px;
+  font-style: italic;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.gallery a::after {
+  content: " →";
+}
+
+.gallery p,
+.gallery ul {
+  margin-bottom: 20px;
+}
+
+.gallery div.image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery div.description {
   padding: 40px 0;
 }
 
