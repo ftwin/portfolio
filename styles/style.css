@@ -303,6 +303,7 @@ header nav ul.icons a:hover::after, header nav ul.icons a:focus::after {
 
 .hero {
   height: 70vh;
+  max-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,28 +337,37 @@ main nav li {
 }
 
 .gallery {
+  padding: 60px 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 100px;
 }
 
-.galleryItem3 {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+.gallery div.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0;
 }
 
-.galleryItem8 {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+.gallery div:nth-child(4) {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
+      grid-column-start: 1;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+}
+
+.gallery div:nth-child(8) {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 4;
+      grid-row-start: 4;
 }
 
 .skills {
@@ -444,9 +454,12 @@ main nav li {
 .contact {
   position: relative;
   height: 350px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact h2 {
@@ -457,20 +470,12 @@ main nav li {
   padding: 0;
 }
 
-.contact div:first-child {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  margin-right: 2%;
-}
-
 .contact .wrapper {
   position: absolute;
   bottom: 100px;
   -webkit-box-shadow: 0 0 20px #dddddd;
           box-shadow: 0 0 20px #dddddd;
   background: #ffffff;
-  margin: 0 10%;
 }
 
 .contact .contactContainer {
