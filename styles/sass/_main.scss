@@ -13,7 +13,7 @@ main {
 // gallery
 
 .gallery {
-    padding: 60px 0;
+    padding: 60px 0 100px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 50px;
@@ -22,15 +22,28 @@ main {
     a {
         color: #ffffff;
         background: $fontColour;
-        padding: 4px 18px 5px 20px;
+        padding: 4px 32px 5px 20px;
         border-radius: 20px;
         font-style: italic;
         text-transform: lowercase;
         letter-spacing: 2px;
         position: relative;
+        transition: position 500ms;
+        margin-right: 5px;
 
         &::after {
-            content: " →";
+            content: "→";
+            position: absolute;
+            top: 3px;
+            right: 10px;
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+                right: 5px;
+                transition: all 200ms;
+            }
         }
     }
 
@@ -39,9 +52,14 @@ main {
         margin-bottom: 20px;
     }
 
+    
+    ul {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
     div.image {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -59,6 +77,70 @@ main {
         grid-column-start: 1; 
         grid-row-start: 4;
     }
+
+    .tags li {
+        padding: 3px 8px;
+        color: $accent;
+        font-weight: 400;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        padding: 0;
+
+        &::before {
+            content: "<";
+            font-weight: 300;
+        }
+
+        &::after {
+            content: " />";
+            font-weight: 300;
+        }
+    }
+}
+
+//about
+
+.about {
+    .wrapper {
+        width: 70%;
+        box-shadow: 0 0 20px darken($secondary, 10);
+        background: $light;
+        padding: 100px;
+        margin-bottom: 100px;
+        
+        background-color: $light;
+        background-image: radial-gradient($fontColour 2%, transparent 2%),
+        radial-gradient(lighten($fontColour, 20) 3%, transparent 3%),  
+        radial-gradient($fontColour 1%, transparent 1%);
+        background-size: 60px 60px;
+        background-position: 1px 1px, 95px 40px, 8px 8px;
+    }
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    background: $light;
+
+    h2 {
+        padding: 0;
+        margin-bottom: 60px;
+        text-align: left;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 2 60%;
+        background: $light;
+    }
+
+    .image {
+        margin-right: 80px;
+        flex: 0 0 40%;
+    }
 }
 
 //skills
@@ -67,9 +149,12 @@ main {
     background: $secondary;
     padding-bottom: 300px;
     ul {
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: stretch;
+        flex-wrap: wrap;
         padding: 60px 0;
+        width: 90%;
+        margin: 0 auto;
     }
 
     li {
@@ -79,6 +164,7 @@ main {
         text-align: center;
         flex: 0 0 calc(10%);
         padding-top: 20px;
+        margin: 0 50px;
 
         &:hover,
         &:focus {
@@ -127,8 +213,8 @@ main {
         fill: $fontColour;
     }
 
-
 }
+
 
 //contact
 
@@ -161,6 +247,7 @@ main {
 
     .contactForm {
         flex: 0 0 45%;
+        margin-left: 50px;
     }
 
     ul {
@@ -206,3 +293,11 @@ main {
     }
 }
 
+.email {
+    a {
+        font-weight: 400;
+        color: $accent;
+        padding: 20px 0;
+    }
+    margin: 5px 0;
+}

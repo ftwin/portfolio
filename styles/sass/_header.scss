@@ -14,47 +14,48 @@ header {
                 position: relative;
                 &:hover,
                 &:focus {
-                        &::after {
-                                content: "";
-                                position: absolute;
-                                bottom: .5rem;
-                                left: 10%;
-                                width: 80%;
-                                height: 6px;
-                                background: $accent;
-                            }
-                }
-            }
-        }
-
-        ul.icons {
-            a {
-                font-size: 2rem;
-                &:hover,
-                &:focus {
-                    color: $accent;
                     &::after {
-                        display: none;
+                        content: "";
+                        position: absolute;
+                        bottom: .5rem;
+                        left: 10%;
+                        width: 80%;
+                        height: 6px;
+                        background: $accent;
                     }
                 }
             }
+            li {
+                transform: translateX(10px);
+                color: red;
+            }
         }
+
+       
     }
 }
 
+
 .hero {
-    height: 70vh;
-    max-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: 
-    // linear-gradient(-30deg, rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.6)),
-    // linear-gradient(50deg, rgba(0, 0, 0, 0.5), rgba(100, 100, 100, 0.6)),
+    linear-gradient(-30deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)),
     url("../assets/laura-vinck-Hyu76loQLdk-unsplash.jpg");
     background-position: center;
-
+    padding: 50px;
+    height: 80vh;
     div {
         margin-left: 40%;
+    }
+}
+
+a.hireMe { 
+    
+    font-style: italic;
+    
+    &:hover {
+        border-bottom: 1px solid $accent;
     }
 }

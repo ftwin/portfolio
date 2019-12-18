@@ -191,6 +191,7 @@ body {
   background: #ffffff;
   font-size: 1.8rem;
   letter-spacing: 1px;
+  line-height: 1.6;
 }
 
 p,
@@ -218,6 +219,7 @@ img {
 h1 {
   font-weight: 800;
   font-size: 5rem;
+  margin: 0;
 }
 
 h2,
@@ -231,6 +233,11 @@ h2 {
   padding-top: 60px;
   font-size: 4rem;
   text-align: center;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 p.logo {
@@ -290,21 +297,13 @@ header nav ul a:hover::after, header nav ul a:focus::after {
   background: #ff5e00;
 }
 
-header nav ul.icons a {
-  font-size: 2rem;
-}
-
-header nav ul.icons a:hover, header nav ul.icons a:focus {
-  color: #ff5e00;
-}
-
-header nav ul.icons a:hover::after, header nav ul.icons a:focus::after {
-  display: none;
+header nav ul li {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  color: red;
 }
 
 .hero {
-  height: 70vh;
-  max-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,12 +314,22 @@ header nav ul.icons a:hover::after, header nav ul.icons a:focus::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../assets/laura-vinck-Hyu76loQLdk-unsplash.jpg");
+  background: linear-gradient(-30deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)), url("../assets/laura-vinck-Hyu76loQLdk-unsplash.jpg");
   background-position: center;
+  padding: 50px;
+  height: 80vh;
 }
 
 .hero div {
   margin-left: 40%;
+}
+
+a.hireMe {
+  font-style: italic;
+}
+
+a.hireMe:hover {
+  border-bottom: 1px solid #ff5e00;
 }
 
 main nav {
@@ -338,7 +347,7 @@ main nav li {
 }
 
 .gallery {
-  padding: 60px 0;
+  padding: 60px 0 100px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -350,16 +359,28 @@ main nav li {
 .gallery a {
   color: #ffffff;
   background: #111111;
-  padding: 4px 18px 5px 20px;
+  padding: 4px 32px 5px 20px;
   border-radius: 20px;
   font-style: italic;
   text-transform: lowercase;
   letter-spacing: 2px;
   position: relative;
+  -webkit-transition: position 500ms;
+  transition: position 500ms;
+  margin-right: 5px;
 }
 
 .gallery a::after {
-  content: " →";
+  content: "→";
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+
+.gallery a:hover::after, .gallery a:focus::after {
+  right: 5px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
 }
 
 .gallery p,
@@ -367,14 +388,18 @@ main nav li {
   margin-bottom: 20px;
 }
 
+.gallery ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .gallery div.image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -401,18 +426,96 @@ main nav li {
       grid-row-start: 4;
 }
 
+.gallery .tags li {
+  padding: 3px 8px;
+  color: #ff5e00;
+  font-weight: 400;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.gallery .tags li::before {
+  content: "<";
+  font-weight: 300;
+}
+
+.gallery .tags li::after {
+  content: " />";
+  font-weight: 300;
+}
+
+.about .wrapper {
+  width: 70%;
+  -webkit-box-shadow: 0 0 20px #dddddd;
+          box-shadow: 0 0 20px #dddddd;
+  background: #ffffff;
+  padding: 100px;
+  margin-bottom: 100px;
+  background-color: #ffffff;
+  background-image: radial-gradient(#111111 2%, transparent 2%), radial-gradient(#444444 3%, transparent 3%), radial-gradient(#111111 1%, transparent 1%);
+  background-size: 60px 60px;
+  background-position: 1px 1px, 95px 40px, 8px 8px;
+}
+
+.aboutContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #ffffff;
+}
+
+.aboutContent h2 {
+  padding: 0;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.aboutContent div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 2 60%;
+          flex: 0 2 60%;
+  background: #ffffff;
+}
+
+.aboutContent .image {
+  margin-right: 80px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+}
+
 .skills {
   background: #f6f6f6;
   padding-bottom: 300px;
 }
 
 .skills ul {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 60px 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .skills li {
@@ -431,6 +534,7 @@ main nav li {
       -ms-flex: 0 0 calc(10%);
           flex: 0 0 calc(10%);
   padding-top: 20px;
+  margin: 0 50px;
 }
 
 .skills li:hover i, .skills li:focus i {
@@ -523,6 +627,7 @@ main nav li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 45%;
           flex: 0 0 45%;
+  margin-left: 50px;
 }
 
 .contact ul {
@@ -571,14 +676,26 @@ main nav li {
   color: #ebebeb;
 }
 
+.email {
+  margin: 5px 0;
+}
+
+.email a {
+  font-weight: 400;
+  color: #ff5e00;
+  padding: 20px 0;
+}
+
 footer {
+  background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-size: 16px 16px;
   background-color: #111111;
   color: #ffffff;
   font-size: 1.8rem;
   padding: 50px;
 }
 
-footer ul {
+footer ul.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,17 +707,19 @@ footer ul {
   padding: 20px;
 }
 
-footer ul a {
+footer ul.social a {
+  color: #ffffff;
+  font-size: 3.2rem;
   padding: 10px 10px;
   margin: 0 2px;
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
 }
 
-footer ul a:hover, footer ul a:focus {
-  border-bottom: 4px solid #ff5e00;
-}
-
-footer i {
-  color: #ffffff;
+footer ul.social a:hover, footer ul.social a:focus {
+  color: #ff5e00;
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
 }
 
 footer .wrapper {

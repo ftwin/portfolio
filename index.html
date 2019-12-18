@@ -20,15 +20,9 @@
                     <p class="logo">Lou Chaney<span>.</span></p>
                 </a>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#portfolio" id="portfolioLink">Portfolio</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact Me</a></li>
-                </ul>
-                <ul class="icons">
-                    <li><a href=""><i class="icon ion-logo-github"></i></a></li>
-                    <li><a href=""><i class="icon ion-logo-twitter"></i></a></li>
-                    <li><a href=""><i class="icon ion-logo-linkedin"></i></a></li>
                 </ul>
             </nav>
             <div class="hero">
@@ -37,7 +31,7 @@
                         Hi, I'm <a href="">Lou Chaney</a>.
                         I create modern responsive web apps.
                     </h1>
-                    <p><a href="">Hire me now.</a></p>
+                    <a class="hireMe" href="#contact">Hire me now.</a>
                 </div>
             </div>
         </div>
@@ -125,6 +119,22 @@
             </div>
         </div>
     </main>
+    <section class="about">
+        <div class="wrapper">
+            <div class="aboutContent">
+                <div class="image">
+                    <img src="./assets/headshot.jpg"
+                    alt="Photo of Lou Chaney wearing an orange beanie, standing in front of a brick wall.">
+                </div>
+                <div class="text">
+                    <h2>About Me<span>.</span></h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus delectus incidunt animi nemo voluptas nesciunt eveniet, vel exercitationem eius recusandae laboriosam iste nihil dolore quia praesentium! Explicabo quod dolores officia!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="skills" id="skills">
         <div class="wrapper">
             <h2>Skills<span>.</span></h2>
@@ -175,6 +185,7 @@
                                 <path d="M37.70433,174.14242l0.94167,-0.73921l82.53237,-67.52221l-23.278,-44.61617z" fill="#FFFFFF"
                                     fill-opacity="0.5">
                                 </path>
+                                
                                 <path
                                     d="M37.66667,174.20833l125.55242,-121.06537c2.63196,-2.53779 7.02483,-1.04054 7.56158,2.57546l17.55267,118.48992l-70.625,41.16496c-2.86738,1.61025 -6.36567,1.61025 -9.23304,0z"
                                     class="firebase">
@@ -211,21 +222,22 @@
                 <div>
                     <h2>Let's make something great together<span>.</span></h2>
                     <p>Get in touch.</p>
+                    <p class="email"><a href="mailto:lou@louchaney.com">lou@louchaney.com</a></p>
                 </div>
                 <div class="contactForm">
-                    <form>
+                    <form method="POST" action="http://www.focuspocus.io/magic/9c0715ca89839e1cb91dae43799cfd21">
                         <ul>
                             <li>
                                 <label for="name">Your name</label>
-                                <input type="name" id="name">
+                                <input type="name" name="name" id="name">
                             </li>
                             <li>
                                 <label for="email">Your email</label>
-                                <input type="email" id="email">
+                                <input type="email" name="email" id="email">
                             </li>
                             <li>
                                 <label for="message">Your message</label>
-                                <textarea id="message"></textarea>
+                                <textarea id="message" name="message"></textarea>
                             </li>
                             <li>
                                 <button type="submit">Send Message</button>
@@ -240,9 +252,9 @@
         <div class="wrapper">
             <p class="logo">Lou Chaney<span>.</span></p>
             <ul class="social">
-                <li><a href=""><i class="icon ion-logo-github"></i></a></li>
-                <li><a href=""><i class="icon ion-logo-twitter"></i></a></li>
-                <li><a href=""><i class="icon ion-logo-linkedin"></i></a></li>
+                <li><a href="https://github.com/ftwin"><i class="icon ion-logo-github"></i></a></li>
+                <li><a href="https://twitter.com/Lou_codes"><i class="icon ion-logo-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/lou-chaney/"><i class="icon ion-logo-linkedin"></i></a></li>
                 <li><a href=""><i class="icon ion-md-mail"></i></a></li>
             </ul>
             <p>2019 &copy Lou Chaney</p>
@@ -251,12 +263,5 @@
     
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 </body>
-<script>
-    //smooth scroll to next section
-        $('html, body').animate({
-            scrollTop: this.offset().top
-        }, 800)
-
-        
-</script>
+<script src="./script.js"></script>
 </html>

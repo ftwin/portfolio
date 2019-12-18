@@ -1,28 +1,37 @@
 footer {
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-size:16px 16px;
     background-color: $fontColour;
     color: $light;
     font-size: 1.8rem;
     padding: 50px;
 
-    ul {
+    ul.social {
         display: flex;
         justify-content: space-between;
         list-style: none;
         text-transform: uppercase;
         padding: 20px;
         a {
+            color: $light;
+            font-size: 3.2rem;
             padding: 10px 10px;
             margin: 0 2px;
+            transition: color 500ms;
             &:hover,
             &:focus {
-                border-bottom: 4px solid $accent;
+                // border-bottom: 4px solid $accent;
+                color: $accent;
+                transition: color 500ms;
+
             }
         }
     }
 
-    i {
-    color: $light;
-    }
 
     .wrapper {
         display: flex;
