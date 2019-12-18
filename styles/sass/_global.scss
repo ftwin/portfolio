@@ -34,6 +34,14 @@ h1 {
     font-weight: 800;
     font-size: 5rem;
     margin: 0;
+    @media (max-width: 1000px) {
+            line-height: 1.4;
+        }
+
+    @media (max-width: 800px) {
+        font-size: 4rem;
+        }
+
 }
 
 
@@ -76,4 +84,8 @@ textarea {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media (max-width: 1000px) {
+            width: 90%;
+        }
 }
