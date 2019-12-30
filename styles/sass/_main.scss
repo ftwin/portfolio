@@ -409,8 +409,14 @@ main .wrapper {
 .email {
     a {
         font-weight: 400;
-        color: $accent;
+        font-style: italic;
         padding: 20px 0;
+
+        &:hover,
+        &:focus {
+            color: $accent;
+        }
     }
+
     margin: 5px 0;
 }

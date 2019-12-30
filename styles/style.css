@@ -926,8 +926,12 @@ main nav li {
 
 .email a {
   font-weight: 400;
-  color: #ff5e00;
+  font-style: italic;
   padding: 20px 0;
+}
+
+.email a:hover, .email a:focus {
+  color: #ff5e00;
 }
 
 footer {
