@@ -85,7 +85,8 @@ a.hireMe {
     
     font-style: italic;
     
-    &:hover {
+    &:hover,
+    &:focus {
         border-bottom: 1px solid $accent;
     }
 }

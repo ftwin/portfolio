@@ -58,7 +58,7 @@ main .wrapper {
     a {
         color: #ffffff;
         background: $fontColour;
-        padding: 4px 32px 5px 20px;
+        padding: 4px 15px 5px 20px;
         border-radius: 20px;
         font-style: italic;
         text-transform: lowercase;
@@ -69,17 +69,20 @@ main .wrapper {
 
         &::after {
             content: "→";
-            position: absolute;
-            top: 3px;
-            right: 10px;
+            position: relative;
+            left: 2px;
         }
 
         &:hover,
         &:focus {
             &::after {
-                right: 5px;
+                left: 9px;
                 transition: all 200ms;
             }
+        }
+
+        &:focus {
+            border: 3px solid $accent;
         }
     }
 
@@ -226,6 +229,10 @@ main .wrapper {
         @media (max-width: 1200px) {
             width: 100%;
         }
+
+        @media (max-width: 700px) {
+            justify-content: space-around;
+        }
     }
 
     li {
@@ -233,20 +240,21 @@ main .wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        flex: 0 0 calc(10%);
+        flex: 0 0 calc(20%);
         padding-top: 20px;
-        margin: 0 50px;
+        // margin: 0 50px;
+        // border: 1px solid tomato;
 
         @media (max-width: 1200px) {
-            margin: 0 30px;
+            // margin: 0 30px;
         }
 
         @media (max-width: 700px) {
-        margin: 0 20px;
+            flex: 0 0 22%;
         }
 
         @media (max-width: 500px) {
-            margin: 0 10px;
+            flex: 0 0 40%;
         }
 
         &:hover,
@@ -275,6 +283,7 @@ main .wrapper {
 
     li.ionIcons {
         padding-top: 7px;
+        line-height: 1.3;
         i {
             font-size: 90px;
             margin-bottom: 0;
