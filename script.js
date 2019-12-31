@@ -5,6 +5,10 @@ const scroll = function(e){
     document.getElementById(e.target.getAttribute('href').replace("#", "")).scrollIntoView({
         behavior: 'smooth'
     });
+    setTimeout(function () {
+         window.location.assign(e.target)
+        }, 300);
+
 }
 
 const anchors = document.getElementsByTagName("a");
